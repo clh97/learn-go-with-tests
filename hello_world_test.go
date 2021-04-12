@@ -32,4 +32,11 @@ func TestHello(t *testing.T) {
 		assertCorrectMessage(t, got, want)
 	})
 
+	t.Run("empty string", func(t *testing.T) {
+		got := Hello("waldo", "")
+		want := "?, waldo!"
+
+		assertCorrectMessage(t, got, want)
+	})
+
 }
